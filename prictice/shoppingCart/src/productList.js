@@ -1,4 +1,4 @@
-import Product from './product';
+import createProduct from './product';
 
 export default class ProductList {
 	constructor (app) {
@@ -24,7 +24,7 @@ export default class ProductList {
 	// private
 	initProductList (productList) {
 		productList.forEach((productData) => {
-			let p = new Product(productData, this);
+			let p = createProduct(productData, this);
 			p.init();
 		});
 	}
